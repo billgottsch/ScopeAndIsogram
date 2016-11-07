@@ -39,15 +39,15 @@ isIsogram( "moOse" ) == false // -- ignore letter case
 function isIsogram(str){
 
   var letters = str.toLowerCase().split('');
-  var checkLetters = [];
+  var letterSearch = [];
 
   letters.forEach(function(letter) {
-    if(checkLetters.indexOf(letter) === -1) {
-      checkLetters.push(letter);
+    if(letterSearch.indexOf(letter) === -1) {
+      letterSearch.push(letter);
     }
   });
 
-  return letters.length === checkLetters.length ? true : false;
+  return letters.length === letterSearch.length ? true : false;
 }
 
 console.assert( isIsogram("Dermatoglyphics") );
